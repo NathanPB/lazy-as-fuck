@@ -1,0 +1,17 @@
+{
+  "name": "lazyasfk",
+  "version": "1.0.0",
+  "description": "Extremely simple lazy properties for Javascript",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "mocha tests/index.spec.js"
+  },
+  "keywords": ["lazy"],
+  "author": "NathanPB<nathan.pbombana@gmail.com>(https://github.com/NathanPB)",
+  "repository": "https://github.com/NathanPB/lazy-as-fuck.git",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.1.2"
+  },
+  "license": "MIT"
+}
