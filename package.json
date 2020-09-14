@@ -6,7 +6,9 @@
   "scripts": {
     "test": "mocha tests/index.spec.js"
   },
-  "keywords": ["lazy"],
+  "keywords": [
+    "lazy"
+  ],
   "author": "NathanPB<nathan.pbombana@gmail.com>(https://github.com/NathanPB)",
   "repository": "https://github.com/NathanPB/lazy-as-fuck.git",
   "devDependencies": {
