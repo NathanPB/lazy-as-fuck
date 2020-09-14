@@ -1,7 +1,11 @@
-const { expect } = require('chai')
+const { use: chaiUse, expect } = require('chai')
 const { describe, it } = require('mocha')
+const chaiAsPromised = require('chai-as-promised')
+
 const lazy = require('../src')
 const lazyAsync = require('../src/async')
+
+chaiUse(chaiAsPromised)
 
 describe('lazyasfk', () => {
   describe('blocking', () => {
@@ -25,6 +29,11 @@ describe('lazyasfk', () => {
         prop.forceCompute()
         prop.forget()
         expect(prop.isPresent()).to.equals(false)
+      })
+
+      it('should throw on compute', () => {
+        const prop = lazy(() => { throw new Error("throw me") })
+        expect(() => prop.forceCompute()).to.throw()
       })
     })
   })
@@ -50,6 +59,11 @@ describe('lazyasfk', () => {
         await prop.forceCompute()
         prop.forget()
         expect(prop.isPresent()).to.equals(false)
+      })
+
+      it('should throw on compute', async () => {
+        const prop = lazyAsync(async () => { throw new Error("throw me") })
+        expect(prop.forceCompute()).to.eventually.be.rejected;
       })
     })
   })

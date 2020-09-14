@@ -13,6 +13,7 @@
   "repository": "https://github.com/NathanPB/lazy-as-fuck.git",
   "devDependencies": {
     "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
     "mocha": "^8.1.2"
   },
   "license": "MIT"
