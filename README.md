@@ -36,7 +36,7 @@ console.log(lazyProperty.isPresent())   // > true
 // CHANGING THE PARAMS OF A PRESENT PROPERTY WILL NOT CHANGE THE OUTPUT
 
 const withParams = lazy((a, b) => a + b) // Works with lazyAsync too
-console.log(withParams(77, 33)) // > 100
+console.log(withParams.get(77, 33)) // > 100
 
 ```
 

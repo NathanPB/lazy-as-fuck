@@ -1,6 +1,6 @@
 {
   "name": "lazyasfk",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Extremely simple lazy properties for Javascript",
   "main": "src/index.js",
   "scripts": {
