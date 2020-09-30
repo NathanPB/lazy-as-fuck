@@ -10,9 +10,9 @@ module.exports = (getter) => {
   let value;
   let isPresent = false;
 
-  const get = async () => {
+  const get = async (...params) => {
     if (!isPresent) {
-      await forceCompute()
+      await forceCompute(...params)
     }
     return value;
   }
@@ -22,8 +22,8 @@ module.exports = (getter) => {
     isPresent = false
   }
 
-  const forceCompute = async () => {
-    value = await getter()
+  const forceCompute = async (...params) => {
+    value = await getter(...params)
     isPresent = true
   }
 

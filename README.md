@@ -28,6 +28,16 @@ lazyProperty.forget()
 console.log(lazyProperty.isPresent())   // > false
 lazyProperty.forceCompute()
 console.log(lazyProperty.isPresent())   // > true
+
+// Also works with params
+
+// NOTE THAT THIS IS NOT MEMOIZATION!!!!!!!!!!!!!!!!!!!!!!!!
+// THE PARAMS ARE USED ONLY FOR THE EVALUATION WHEN THE VALUE IS NOT PRESENT
+// CHANGING THE PARAMS OF A PRESENT PROPERTY WILL NOT CHANGE THE OUTPUT
+
+const withParams = lazy((a, b) => a + b) // Works with lazyAsync too
+console.log(withParams(77, 33)) // > 100
+
 ```
 
 The function names are pretty self-explanatory, I don't need I'll need to write function references for this.

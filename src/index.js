@@ -10,9 +10,9 @@ module.exports = (getter) => {
   let value;
   let isPresent = false;
 
-  const get = () => {
+  const get = (...params) => {
     if (!isPresent) {
-      forceCompute()
+      forceCompute(...params)
     }
     return value;
   }
@@ -22,8 +22,8 @@ module.exports = (getter) => {
     isPresent = false
   }
 
-  const forceCompute = () => {
-    value = getter()
+  const forceCompute = (...params) => {
+    value = getter(...params)
     isPresent = true
   }
 
