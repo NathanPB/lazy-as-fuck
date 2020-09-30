@@ -4,7 +4,7 @@
   "description": "Extremely simple lazy properties for Javascript",
   "main": "src/index.js",
   "scripts": {
-    "test": "mocha tests/index.spec.js"
+    "test": "npx mocha tests/index.spec.js"
   },
   "keywords": [
     "lazy"
